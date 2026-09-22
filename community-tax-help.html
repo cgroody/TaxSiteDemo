@@ -3,54 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wake Community Tax Help — Free Tax Preparation</title>
+<title>Cape Fear Tax Aide — Free Tax Preparation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #EEF0E6;
-    --paper-raised: #F7F8F1;
-    --ink: #182420;
-    --ink-soft: #445048;
-    --pine: #2F5233;
-    --pine-deep: #223d27;
-    --pine-tint: #E4EADB;
-    --gold: #A9761F;
-    --gold-bright: #C98A2B;
-    --line: #C7CBB6;
-    --line-soft: #DBDECB;
-    --focus: #1758C4;
+    --paper: #FFFFFF;
+    --paper-raised: #F4F7FA;
+    --ink: #0F172A;
+    --ink-soft: #475569;
+    --pine: #1E40AF;
+    --pine-deep: #1E3A8A;
+    --pine-tint: #EFF6FF;
+    --gold: #2563EB;
+    --gold-bright: #3B82F6;
+    --line: #CBD5E1;
+    --line-soft: #E2E8F0;
+    --focus: #2563EB;
     --radius: 3px;
   }
   :root[data-theme="dark"] {
-    --paper: #12180F;
-    --paper-raised: #182015;
-    --ink: #E9EBE0;
-    --ink-soft: #B7BCA9;
-    --pine: #8FBB92;
-    --pine-deep: #A9CFAC;
-    --pine-tint: #1E2B1C;
-    --gold: #E0B15A;
-    --gold-bright: #F0C46E;
-    --line: #3A4432;
-    --line-soft: #2A3225;
-    --focus: #7FB1FF;
+    --paper: #0F172A;
+    --paper-raised: #1E293B;
+    --ink: #F8FAFC;
+    --ink-soft: #94A3B8;
+    --pine: #60A5FA;
+    --pine-deep: #93C5FD;
+    --pine-tint: #1E293B;
+    --gold: #38BDF8;
+    --gold-bright: #60A5FA;
+    --line: #334155;
+    --line-soft: #1E293B;
+    --focus: #60A5FA;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #12180F;
-      --paper-raised: #182015;
-      --ink: #E9EBE0;
-      --ink-soft: #B7BCA9;
-      --pine: #8FBB92;
-      --pine-deep: #A9CFAC;
-      --pine-tint: #1E2B1C;
-      --gold: #E0B15A;
-      --gold-bright: #F0C46E;
-      --line: #3A4432;
-      --line-soft: #2A3225;
-      --focus: #7FB1FF;
+      --paper: #0F172A;
+      --paper-raised: #1E293B;
+      --ink: #F8FAFC;
+      --ink-soft: #94A3B8;
+      --pine: #60A5FA;
+      --pine-deep: #93C5FD;
+      --pine-tint: #1E293B;
+      --gold: #38BDF8;
+      --gold-bright: #60A5FA;
+      --line: #334155;
+      --line-soft: #1E293B;
+      --focus: #60A5FA;
     }
   }
 
@@ -72,7 +72,6 @@
     margin: 0;
   }
   a { color: var(--pine-deep); }
-  :root[data-theme="dark"] a, @media (prefers-color-scheme: dark) { }
   a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
     outline: 2.5px solid var(--focus);
     outline-offset: 2px;
@@ -149,8 +148,6 @@
   main { min-height: 60vh; }
   .page { display: none; padding: 44px 0 72px; }
   .page.active { display: block; }
-
-  .eyebrow-none {} /* deliberately not using tracked-out eyebrow labels */
 
   .hero {
     display: grid;
@@ -281,6 +278,85 @@
   .role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   @media (max-width: 760px) { .role-grid { grid-template-columns: 1fr; } }
 
+  /* ---------- Stylized Booking Form UI ---------- */
+  .acuity-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    margin-top: 24px;
+    padding: 28px;
+  }
+  .acuity-header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  .acuity-header h2 {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+  }
+  .acuity-header p {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 760px) { .booking-grid { grid-template-columns: 1fr; } }
+  
+  .booking-field { margin-bottom: 18px; }
+  .booking-field label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .booking-field select, 
+  .booking-field input {
+    width: 100%;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.98rem;
+    padding: 10px 12px;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .booking-field select:focus, 
+  .booking-field input:focus {
+    outline: 2.5px solid var(--focus);
+    outline-offset: 1px;
+    border-color: transparent;
+  }
+
+  .time-slots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .time-slot-btn {
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    text-align: center;
+  }
+  .time-slot-btn:hover, .time-slot-btn.active {
+    border-color: var(--pine);
+    background: var(--pine-tint);
+    color: var(--pine-deep);
+  }
+
   form.contact-form { display: grid; gap: 16px; max-width: 520px; }
   form.contact-form label { font-size: 0.88rem; font-weight: 600; color: var(--ink-soft); display: block; margin-bottom: 6px; }
   form.contact-form input, form.contact-form textarea, form.contact-form select {
@@ -327,20 +403,23 @@
 <header class="site">
   <div class="wrap brandbar">
     <div class="brand">
-      <span class="mark">Wake Community <span class="thin">Tax Help</span></span>
+      <span class="mark">Cape Fear <span class="thin">Tax Aide</span></span>
     </div>
     <div class="tagline">Free tax preparation, done by trained neighbors — not a company.</div>
   </div>
   <div class="wrap">
     <nav class="tabs" id="tabnav" aria-label="Site sections">
       <button data-page="home" aria-selected="true">Home</button>
+      <button data-page="book-embed">Book Appointment (Form)</button>
+      <button data-page="book-link">Book Appointment (Link)</button>
       <button data-page="documents">Documents to Bring</button>
       <button data-page="property-tax">Property Tax Relief</button>
       <button data-page="training">Volunteer Training</button>
       <button data-page="resources">Resource Library</button>
       <button data-page="volunteer">Become a Volunteer</button>
       <button data-page="locations">Other Locations</button>
-      <button data-page="contact">Contact Us</button>
+      <button data-page="contact">Contact Us Form</button>
+      <button data-page="contact-simple">Contact Us</button>
     </nav>
   </div>
 </header>
@@ -352,9 +431,9 @@
     <div class="hero">
       <div>
         <h1>Your taxes, prepared for free by someone who lives nearby.</h1>
-        <p class="lede">Every season, IRS-certified volunteers here in Wake County prepare federal and state returns at no cost — no upsells, no fine print, no fee taken from your refund.</p>
+        <p class="lede">Every season, IRS-certified volunteers across the Cape Fear region prepare federal and state returns at no cost — no upsells, no fine print, no fee taken from your refund.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact" data-page-link="contact">Book an appointment</a>
+          <a class="btn btn-primary" href="#book-embed" data-page-link="book-embed">Book an appointment</a>
           <a class="btn btn-ghost" href="#documents" data-page-link="documents">See what to bring</a>
         </div>
       </div>
@@ -421,6 +500,92 @@
         <p>A volunteer will tell you at intake if your return falls outside what the program can prepare — for example, rental property with depreciation, or a complex small business. In that case they'll explain why and point you toward a paid preparer or the IRS's own guidance.</p>
       </details>
     </section>
+  </section>
+
+  <!-- BOOKING - EMBEDDED / STYLIZED FORM -->
+  <section class="page" id="page-book-embed">
+    <h1>Schedule an Appointment</h1>
+    <p class="lede">Choose an available location, date, and time slot below to schedule your free tax preparation appointment.</p>
+    
+    <div class="acuity-card">
+      <div class="acuity-header">
+        <h2>Cape Fear Tax Aide Scheduler</h2>
+        <p>Powered by Acuity Scheduling</p>
+      </div>
+
+      <form onsubmit="alert('Appointment booked successfully!'); return false;">
+        <div class="booking-grid">
+          <div>
+            <div class="booking-field">
+              <label for="service-select">Select Service</label>
+              <select id="service-select">
+                <option>Standard Federal &amp; State Tax Preparation (1 Hour)</option>
+                <option>Property Tax Relief Application Assistance (30 Min)</option>
+              </select>
+            </div>
+
+            <div class="booking-field">
+              <label for="location-select">Select Location</label>
+              <select id="location-select">
+                <option>Wilmington Downtown Library</option>
+                <option>New Hanover County Senior Center</option>
+                <option>Cape Fear Community Center</option>
+              </select>
+            </div>
+
+            <div class="booking-field">
+              <label for="date-select">Select Date</label>
+              <input type="date" id="date-select" value="2026-02-10">
+            </div>
+
+            <div class="booking-field">
+              <label>Available Time Slots</label>
+              <div class="time-slots">
+                <button type="button" class="time-slot-btn active">9:00 AM</button>
+                <button type="button" class="time-slot-btn">10:15 AM</button>
+                <button type="button" class="time-slot-btn">11:30 AM</button>
+                <button type="button" class="time-slot-btn">1:30 PM</button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="booking-field">
+              <label for="book-name">Full Name</label>
+              <input type="text" id="book-name" placeholder="First and Last Name" required>
+            </div>
+
+            <div class="booking-field">
+              <label for="book-email">Email Address</label>
+              <input type="email" id="book-email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="booking-field">
+              <label for="book-phone">Phone Number</label>
+              <input type="tel" id="book-phone" placeholder="(910) 000-0000" required>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <button class="btn btn-primary" type="submit" style="width: 100%;">Confirm Appointment</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- BOOKING - DIRECT LINK -->
+  <section class="page" id="page-book-link">
+    <h1>Book Your Tax Help Session</h1>
+    <p class="lede">Click the button below to open our official Acuity Scheduling page in a new window and choose your time slot.</p>
+
+    <div class="callout" style="margin-top: 28px;">
+      <p><strong>Note:</strong> You will be directed to our secure Acuity Scheduling page to pick a location and time.</p>
+    </div>
+
+    <div style="margin-top: 32px;">
+      <a class="btn btn-primary" href="https://capefeartaxaide.acuityscheduling.com" target="_blank" rel="noopener noreferrer">Go to Acuity Scheduling Page &rarr;</a>
+    </div>
   </section>
 
   <!-- DOCUMENTS -->
@@ -504,7 +669,7 @@
         <div class="step">
           <div class="num">1</div>
           <h3>Get the form</h3>
-          <p>Wake County's tax office publishes the AV-9 application on its website, or a volunteer can print one for you at your appointment.</p>
+          <p>Your county tax office publishes the AV-9 application on its website, or a volunteer can print one for you at your appointment.</p>
         </div>
         <div class="step">
           <div class="num">2</div>
@@ -520,7 +685,7 @@
     </section>
 
     <div class="callout">
-      <p><strong>A volunteer can walk through eligibility with you</strong> during a regular tax appointment, but the application itself is filed separately with Wake County — not with your tax return.</p>
+      <p><strong>A volunteer can walk through eligibility with you</strong> during a regular tax appointment, but the application itself is filed separately with your county tax office — not with your tax return.</p>
     </div>
   </section>
 
@@ -678,14 +843,14 @@
       <h2>Nearby options <span class="placeholder-tag">sample data</span></h2>
       <p class="sub">Placeholder entries — swap these for the real partner sites once you have them.</p>
       <div class="locations-list">
-        <div class="loc-row"><span class="loc-name">North Regional Library</span><span class="loc-meta">Tuesdays &amp; Thursdays, by appointment</span></div>
-        <div class="loc-row"><span class="loc-name">Southeast Community Center</span><span class="loc-meta">Weekday mornings, walk-ins accepted before 11am</span></div>
-        <div class="loc-row"><span class="loc-name">Eastside Senior Center</span><span class="loc-meta">Wednesdays, appointment strongly recommended</span></div>
+        <div class="loc-row"><span class="loc-name">New Hanover County Senior Center</span><span class="loc-meta">Tuesdays &amp; Thursdays, by appointment</span></div>
+        <div class="loc-row"><span class="loc-name">Wilmington Downtown Library</span><span class="loc-meta">Weekday mornings, walk-ins accepted before 11am</span></div>
+        <div class="loc-row"><span class="loc-name">Cape Fear Community Center</span><span class="loc-meta">Wednesdays, appointment strongly recommended</span></div>
       </div>
     </section>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT FORM -->
   <section class="page" id="page-contact">
     <h1>Contact us</h1>
     <p class="lede">Appointments are booked online once the season opens. Outside of booking, this is the best way to reach the coordinating team.</p>
@@ -724,17 +889,26 @@
         <h2>Direct contact <span class="placeholder-tag">placeholder</span></h2>
         <p><strong>Phone:</strong> (000) 000-0000</p>
         <p><strong>Email:</strong> info@example.org</p>
-        <p><strong>Mailing address:</strong><br>123 Community Way<br>Raleigh, NC 27601</p>
+        <p><strong>Mailing address:</strong><br>123 Community Way<br>Wilmington, NC 28401</p>
         <p style="color: var(--ink-soft); font-size: 0.88rem;">Replace these with your organization's real details — they're left as placeholders so nothing incorrect gets published by mistake.</p>
       </section>
     </div>
+  </section>
+
+  <!-- CONTACT SIMPLE -->
+  <section class="page" id="page-contact-simple">
+    <h1>Contact Us</h1>
+    <p class="lede" style="margin-top: 24px;">
+      If you wish to contact Cape Fear Tax Aide, please contact us at: 
+      <a href="mailto:capefeartaxaide@gmail.com">capefeartaxaide@gmail.com</a>
+    </p>
   </section>
 
 </main>
 
 <footer class="site">
   <div class="wrap foot-grid">
-    <div>© <span id="year"></span> Wake Community Tax Help. Volunteer-run, donor-funded, and independent of any tax-preparation company.</div>
+    <div>© <span id="year"></span> Cape Fear Tax Aide. Volunteer-run, donor-funded, and independent of any tax-preparation company.</div>
     <div><a href="#" onclick="return false;">Privacy &amp; terms</a> <span class="placeholder-tag">link TBD</span></div>
   </div>
 </footer>
@@ -779,6 +953,15 @@
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* Interactive Time Slot Picker for Booking Form */
+    var timeSlotBtns = document.querySelectorAll('.time-slot-btn');
+    timeSlotBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        timeSlotBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+      });
+    });
   })();
 </script>
 
